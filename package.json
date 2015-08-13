@@ -1,0 +1,30 @@
+{
+  "name": "ncr-ui"
+, "version": "0.0.1"
+, "private": true
+, "dependencies": {
+    "requirejs": "latest"
+  , "express": "latest"
+  , "serve-static": "latest"
+  , "log4js": "latest"
+  , "body-parser": "latest"
+  , "method-override": "latest"
+  , "restify": "latest"
+  , "formidable": "latest"
+  , "mime" : "latest"
+  , "node-pre-gyp": "latest"
+  , "sqlite3" : "latest"
+  , "http" : "latest"
+  , "https" : "latest"
+  , "socket.io" : "latest"
+  , "url" : "latest"
+  , "querystring" : "latest"
+  , "fs" : "latest"
+  , "node-uuid" : "latest"
+  , "rimraf" : "latest"
+  }
+, "devDependencies": {
+  }
+, "scripts": {
+  }
+}

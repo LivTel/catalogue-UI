@@ -1,0 +1,13 @@
+{
+  "globalOpts": {"helperType":	     "nodejs",
+  		 "helperPort":       2718, 
+		 "helperCGI":        "app/js/libs/js9/js9Helper.cgi",
+		 "fits2png":         false,
+		 "debug":	     1,
+		 "workDir":	     "",
+		 "dataPath":	     "$HOME/Desktop:$HOME/data",
+		 "analysisPlugins":  "app/js/js9/analysis-plugins",
+		 "analysisWrappers": "app/js/js9/analysis-wrappers"},
+  "imageOpts":  {"colormap":	     "grey",
+  		 "scale":     	     "linear"}
+}

@@ -1,0 +1,14 @@
+{ 
+  "http_port":"5002",
+  "ws_port":"3002",
+  "base_dir":"/skycam/Skycam-UI/ncr-ui/",
+  "bin_dir":"/skycam/Skycam-UI/ncr-ui/bin/",
+  "img_dir":"/skycam/Skycam-UI/ncr-ui/img/",
+  "jobs_dir":"/skycam/Skycam-UI/jobs/",
+  "app_dir":"/skycam/Skycam-UI/app/",
+  "db_dir":"/skycam/Skycam-UI/db/",
+  "db_filename":"store.sqlite"
+}
+
+
+

@@ -1,0 +1,31 @@
+# Compiled source #
+###################
+*.o
+*.so
+*.pyc
+ 
+# Packages #
+############
+*.gz
+*.rar
+*.tar
+*.zip
+ 
+# Logs and databases #
+######################
+cat/apass/
+cat/usnob/
+db/skycam
+*.log
+*.sql
+*.db
+ 
+# OS generated files #
+######################
+*.*~
+*~
+
+# PW_LIST #
+###########
+/etc/pipe/PW_LIST
+

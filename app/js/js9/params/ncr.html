@@ -1,0 +1,78 @@
+<html>
+<header>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+</header>
+
+<body>
+    
+<title>Run NCR</title>
+
+<div class="js9HelpText">
+
+<center><b>Help for NCR</b></center>
+
+<p>
+Define a single box region (Region > Box). Input RA and DEC should be in sexagesimal notation. Binning should be an integer.
+</p>
+
+</div>
+
+<form id="ncrForm" name="ncrForm" class="js9AnalysisForm">
+
+<div class="linegroup">
+<span class="column_A">
+<b>RA:</b>
+</span>
+<span class="column_B">
+<input type="text" class="text_B" id="ra" name="ra" value="" />
+</span>
+</div>
+
+<div class="linegroup">
+<span class="column_A">
+<b>DEC:</b>
+</span>
+<span class="column_B">
+<input type="text" class="text_B" id="dec" name="dec" value="" />
+</span>
+</div>
+
+<div class="linegroup">
+<span class="column_A">
+<b>Binning:</b>
+</span>
+<span class="column_B">
+<input type="text" class="text_B" id="binning" name="binning" value="1" />
+</span>
+</div>
+
+<input type="hidden" id="user" name="user" value=""/>
+
+<p>
+<input type="button" id="populate_from_job" name="populate_from_job" value="Populate RA and DEC from Job" style="float:left;" onclick="document.getElementById('ra').value = readCookie('ra'); document.getElementById('dec').value = readCookie('dec');"/>
+&nbsp;
+<input id="takemetocoords" name="takemetocoords" type="button" class="button" value="Take me there" 
+onclick="
+if (!hms2dec(document.getElementById('ra').value)) { alert('RA must be in HH:MM:SS.SSS format'); return false; }
+if (!dms2dec(document.getElementById('dec').value)) { alert('DEC must be in DD:MM:SS.SSS format'); return false; }
+JS9.SetPan(JS9.WCSToPix(hms2dec(document.getElementById('ra').value), dms2dec(document.getElementById('dec').value)).x, 
+JS9.WCSToPix(hms2dec(document.getElementById('ra').value), dms2dec(document.getElementById('dec').value)).y); 
+var reg='# Region file format: JS9 version 1.0\n FK5\n circle(' + document.getElementById('ra').value + ', ' + document.getElementById('dec').value + ', 5&quot;)'; 
+JS9.AddRegions(reg);">
+
+<br/><br/>
+
+<input id="run" name="run" type="button" class="button" value="Execute" 
+onclick="document.getElementById('user').value=readCookie('username'); 
+JS9.SetWCSSys('physical'); return JS9.SubmitAnalysis(this);">
+
+<input id="close" name="Close" type="button" class="button" value="Close" 
+onclick="var form = $(this).closest('form');
+var dhtml = form.closest('.dhtmlwindow')[0];
+dhtml.close();
+return false;" style="float: right;">
+
+</form>
+
+</body>
+</html>
