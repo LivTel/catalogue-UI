@@ -1,5 +1,5 @@
 {
-  "name": "ncr-ui"
+  "name": "Skycam-UI"
 , "version": "0.0.1"
 , "private": true
 , "dependencies": {
@@ -22,6 +22,7 @@
   , "fs" : "latest"
   , "node-uuid" : "latest"
   , "rimraf" : "latest"
+  , "pg" : "latest"
   }
 , "devDependencies": {
   }

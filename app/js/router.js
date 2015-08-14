@@ -4,6 +4,7 @@ define(function(require, exports, module) {
   var Router = Backbone.Router.extend({
     routes: {
       "dashboard": "index",
+      "scs" : "scs",
       "*notFound" : "index"
     },
     index: function() {
@@ -20,6 +21,24 @@ define(function(require, exports, module) {
             dashboard = Vm.create({}, 'dashboard', Dashboard);
           //}
           dashboard.render(function(){});
+        });
+      });
+    },
+    
+    scs: function() {
+      console.log("(router.js) routing scs/");
+      require(['views/frame', 'views/scs', 'vm'], function (Frame, SCS, Vm) {
+        var frame = Vm.get('frame');    
+        if(!frame) {
+          frame = Vm.create({}, 'frame', Frame);
+        }
+        // call frame render function with scs render functions as callback
+        frame.render(function() {
+          var scs = Vm.get('scs');
+          //if(!scs) {
+            scs = Vm.create({}, 'scs', SCS);
+          //}
+          scs.render(function(){});
         });
       });
     }

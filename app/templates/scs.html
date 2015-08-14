@@ -1,0 +1,61 @@
+<div class="modal fade bs-example-modal-sm" id="loading" tabindex="-1"
+  role="dialog" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Searching...</h4>
+      </div>
+      <div class="modal-body">
+        <div class="progress">
+          <div class="progress-bar progress-bar-info progress-bar-striped active" style="width: 100%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1 class="page-header">SCS</h1>
+<p class="help-block">This page allows you to perform a SCS on the Skycam database</p>
+<div class="col-xs-12">&nbsp;</div>   
+<div class="row">
+  <div class="col-xs-12">&nbsp;</div>       
+  <div class="col-sm-3">
+    <form role="form" id="form_sm" class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="input_ra">RA</label>
+        <div class="col-xs-10">
+          <input type="text" name="ra" class="form-control" id="input_ra" value="263">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="input_dec">DEC</label>
+        <div class="col-xs-10">
+          <input type="text" name="dec" class="form-control" id="input_dec" value="18">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="input_sr">SR</label>
+        <div class="col-xs-10">
+          <input type="text" name="sr" class="form-control" id="input_sr" value="2">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="input_lim">Lim</label>
+        <div class="col-xs-10">
+          <input type="text" name="lim" class="form-control" id="input_lim" value="10000">
+        </div>
+      </div>      
+
+      <div class="col-xs-12">&nbsp;</div>
+
+      <button type="submit" class="btn btn-default pull-left">Submit</button>
+    </form>
+    <div class="col-xs-12">&nbsp;</div>
+    <div class="col-xs-12">&nbsp;</div>
+  </div> 
+  <div class="row col-sm-5">
+    <div class="col-xs-5" id="container-plot-placeholder"></div> 
+  </div>
+</div>
+
+

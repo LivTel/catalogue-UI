@@ -3,10 +3,8 @@ define([
   'lodash',
   'backbone',
   'bootstrap',
-  'bootbox',
-  'cookies',
   'text!templates/dashboard.html'
-], function($, _, Backbone, Bootstrap, Bootbox, Cookies, dashboardTemplate) {   
+], function($, _, Backbone, Bootstrap, dashboardTemplate) {   
   var Dashboard = Backbone.View.extend({
     el: '#container-content',
     initialize: function() {
