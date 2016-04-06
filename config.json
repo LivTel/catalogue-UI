@@ -3,12 +3,12 @@
   "ws_port":"3002",
   "db_host":"catalogue",
   "db_port":"5433",
-  "base_dir":"/home/eng/Skycam-UI/ncr-ui/",
-  "bin_dir":"/home/eng/Skycam-UI/ncr-ui/bin/",
-  "img_dir":"/home/eng/Skycam-UI/ncr-ui/img/",
-  "jobs_dir":"/home/eng/Skycam-UI/jobs/",
-  "app_dir":"/home/eng/Skycam-UI/app/",
-  "db_dir":"/home/eng/Skycam-UI/db/",
+  "base_dir":"/home/rmb/devel/skycam/Skycam-UI/",
+  "bin_dir":"/home/rmb/devel/skycam/Skycam-UI/bin",
+  "img_dir":"/home/rmb/devel/skycam/Skycam-UI/img",
+  "jobs_dir":"/home/rmb/devel/skycam/Skycam-UI/jobs",
+  "app_dir":"/home/rmb/devel/skycam/Skycam-UI/app",
+  "db_dir":"/home/rmb/devel/skycam/Skycam-UI/db",
   "db_filename":"store.sqlite"
 }
 

@@ -23,7 +23,7 @@ function scs(req, res, next) {
     console.error("received scs request");
     ra = req.params.ra, dec = req.params.dec, sr = req.params.sr, lim = req.params.lim;
 
-    conString = "postgres://" + cfg.db_host + ":" + cfg.db_port + "/skycam";
+    conString = "postgres://eng@" + cfg.db_host + ":" + cfg.db_port + "/skycam";
     pg.connect(conString, function(err, client, done) {
         if(err) {
             return console.error('error fetching client from pool', err);

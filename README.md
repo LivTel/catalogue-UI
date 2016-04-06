@@ -1,61 +1,25 @@
-ncr-ui
+Skycam-UI
 =============
 
-## Installation
+# Overview
 
-+ grab a copy of the repository:
+This package provides a prototype framework for visualising Skycam data. It is written in Backbone.js. 
+Some of the parameter names and directories are relics of porting the structure from a different project. 
 
-`https://github.com/robbarnsley/ncr-ui`
+# Installation
 
-+ install/update node packages in package.json
+1. Clone the repository
 
-`npm install`
+2. Edit `config.json` configuration file. Change `_*.dir` parameters to match package path distribution 
+and `db_*` to point to whereever the Skycam database is held. This requires that the database is 
+served externally without a password
 
-+ install cfitsio and libpng devel packages
+3. Start serving files through (`node http.js`) and start webservice (`node ws.js`) 
 
-`yum install cfitsio-devel libpng-devel`
+4. Point browser to `localhost:[http_port]` where [**http\_port**] is the port specified in `config.json` 
+(default 5002)
 
-+ add rules to iptables, e.g.
+# Known Issues
 
-`iptables -I INPUT 6 -p tcp --dport 2718 -j ACCEPT`
-
-`iptables -I INPUT 6 -p tcp --dport 3001 -j ACCEPT`
-
-`iptables -I INPUT 6 -p tcp --dport 5001 -j ACCEPT`
-
-+ make and install js9Helper (js/libs/js9/ directory), js9 Makefile may need to be altered to include util/astroem directories in INC flags.
-
-`./configure --with-webdir="../" --with-helper="nodejs" --with-cfitsio="/usr/"`
-
-`./make`
-
-`su; make install`
-
-+ build wcstools/sky2xy in src/ directory
-
-`make sky2xy`
-
-+ make js9Xeq executable
-
-`chmod 755 js9Xeq`
-
-+ install python packages
-
-`pip install pyregion numpy matplotlib pyfits astropy shortuuid`
-
-`easy_install photutils`
-
-## Running
-
-+ edit config files (*_dir paths in config.json, and http/ws hosts in app/js/config.json)
-
-+ start node http, webservice and js9 helper (in root directory, not js/jS9!):
-
-`node index.js`
-
-`node ws.js`
-
-`node js9Helper.js`
-
-
-
+Currently the cone search is performed by connecting directly to the database. This should be superceded by
+a call to the catalogue-webservices SCS routine (i.e. within a model).
