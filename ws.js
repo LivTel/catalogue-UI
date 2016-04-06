@@ -32,7 +32,7 @@ function scs(req, res, next) {
         // construct LIMIT clause
         lim_clause = " LIMIT " + lim;
 
-        qry = "SELECT apassref, ra, dec, inst_mag, count(*) as n_obs, degrees(pos <-> spoint '(" + ra + "d," + dec + "d)') as distance FROM skycamz.sources WHERE pos @ scircle '<(" + ra + "d," + dec + "d)," + sr + "d>' = true GROUP BY apassref, ra, dec, inst_mag, distance" + lim_clause;
+        qry = "SELECT skycamref, radeg, decdeg, nobs, degrees(pos <-> spoint '(" + ra + "d," + dec + "d)') as distance FROM skycamz.catalogue WHERE pos @ scircle '<(" + ra + "d," + dec + "d)," + sr + "d>' = true " + lim_clause;
         client.query(qry, function(err, result) {
             console.log('executing query: "' + qry + '"');
             done();

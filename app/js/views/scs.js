@@ -52,11 +52,11 @@ define([
             data = []
             JSON.parse(res.responseText).forEach(function(entry) {
               data.push({
-                'name' : entry.apassref,
-                'x' : entry.ra,
-                'y' : entry.dec,
+                'name' : entry.skycamref,
+                'x' : entry.radeg,
+                'y' : entry.decdeg,
                 'distance' : entry.distance,
-                'n_obs' : entry.n_obs
+                'nobs' : entry.nobs
               });
             });
             that.scs_plot.render(data); 

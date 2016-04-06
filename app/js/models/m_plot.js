@@ -58,7 +58,7 @@ define([
             '<b>ra: </b>' + this.x + ' deg<br>' + 
             '<b>dec: </b>' + this.y + ' deg<br>' + 
             '<b>dist: </b>' + this.point.distance + ' deg<br>' + 
-            '<b>num obs: </b>' + this.point.n_obs;
+            '<b>num obs: </b>' + this.point.nobs;
           },
           hideDelay: 400
         },
