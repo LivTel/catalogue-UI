@@ -7,11 +7,12 @@ define([
     initialize: function() {
       console.log("(m_scs.js) created m_scs instance");
     },
-    execute: function (ra, dec, sr, limit, callback) {  
+    execute: function (db, ra, dec, sr, limit, min_mag, max_mag, filterby, orderby, callback) {  
       console.log("(m_scs.js) calling webservice using GET method with path '/scs");
       that = this;
-      res = $.get("http://" + cfg.ws_host + ":" + cfg.ws_port + "/scs/" + ra + "/" + dec + "/" + sr + "/" + limit, function(data) {
-        callback(res);
+      res = $.get("http://" + cfg.catalogues_host + ":" + cfg.catalogues_port + "/scs/" + db + "/" + ra + "/" + dec + "/" + sr + "/" + filterby + "/" + min_mag + "/" + max_mag + "/" + orderby + "/" + limit + "/json", function(data) {
+        console.log("http://" + cfg.catalogues_host + ":" + cfg.catalogues_port + "/scs/" + db + "/" + ra + "/" + dec + "/" + sr + "/" + filterby + "/" + min_mag + "/" + max_mag + "/" + orderby + "/" + limit + "/json");
+	callback(res);
       });
     }
   });

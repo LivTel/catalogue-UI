@@ -1,14 +1,16 @@
 { 
-  "http_port":"5002",
-  "ws_port":"3002",
-  "db_host":"catalogue",
-  "db_port":"5433",
-  "base_dir":"/home/rmb/devel/skycam/Skycam-UI/",
-  "bin_dir":"/home/rmb/devel/skycam/Skycam-UI/bin",
-  "img_dir":"/home/rmb/devel/skycam/Skycam-UI/img",
-  "jobs_dir":"/home/rmb/devel/skycam/Skycam-UI/jobs",
-  "app_dir":"/home/rmb/devel/skycam/Skycam-UI/app",
-  "db_dir":"/home/rmb/devel/skycam/Skycam-UI/db",
+  "http_host":"localhost",
+  "http_port":"5001",
+  "ws_host":"localhost",
+  "ws_port":"3001",
+  "catalogues_host":"localhost",
+  "catalogues_port":"3001",
+  "base_dir":"/home/barnsley/Skycam/Skycam-UI/",
+  "bin_dir":"/home/barnsley/Skycam/Skycam-UI/bin",
+  "img_dir":"/home/barnsley/Skycam/Skycam-UI/img",
+  "jobs_dir":"/home/barnsley/Skycam/Skycam-UI/jobs",
+  "app_dir":"/home/barnsley/Skycam/Skycam-UI/app",
+  "db_dir":"/home/barnsley/Skycam/Skycam-UI/db",
   "db_filename":"store.sqlite"
 }
 

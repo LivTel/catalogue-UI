@@ -15,47 +15,106 @@
 </div>
 
 <h1 class="page-header">SCS</h1>
-<p class="help-block">This page allows you to perform a SCS on the Skycam database</p>
-<div class="col-xs-12">&nbsp;</div>   
-<div class="row">
-  <div class="col-xs-12">&nbsp;</div>       
-  <div class="col-sm-3">
-    <form role="form" id="form_sm" class="form-horizontal">
+<p class="help-block">This page allows you to perform a SCS on the Skycam databases.</p>
+<p class="help-block">Fill out the form and click submit. Multiple light curves can then be queried by shift-clicking the points on the finder chart and clicking "Get LC for selected points".</p>
+<p class="help-block">Setting max objects to zero will retrieve all results.</p>
+<div class="col-lg-12">&nbsp;</div>  
+<div class="col-lg-12 alert alert-info" id="scs-info">Ready.</div>
+<form role="form" id="form_sm" class="form-horizontal">
+  <div class="col-lg-12">
+    <div class="col-lg-12">&nbsp;</div>       
+    <div class="col-lg-4">
       <div class="form-group">
-        <label class="col-sm-2 control-label" for="input_ra">RA</label>
-        <div class="col-xs-10">
-          <input type="text" name="ra" class="form-control" id="input_ra" value="263">
-        </div>
+	<label class="col-lg-4 control-label" for="input_database">Database</label>
+	<div class="col-lg-8">
+	  <select class="form-control " id="input_database" name="database">
+	    <option value="apass">APASSdr9</option>
+	    <option value="usnob">USNOB1</option>
+	    <option value="skycamt" DISABLED>SkycamT</option>
+	    <option value="skycamz" SELECTED>SkycamZ</option>
+	  </select>
+	</div>
+      </div>   
+      <div class="form-group text-left">
+	<label class="col-lg-4 control-label" for="input_ra">RA<p class="small">(deg || HH:MM:SS)</p></label>
+	<div class="col-lg-8">
+	  <input type="text" name="ra" class="form-control" id="input_ra" value="00:42:50.98">
+	</div>
       </div>
       <div class="form-group">
-        <label class="col-sm-2 control-label" for="input_dec">DEC</label>
-        <div class="col-xs-10">
-          <input type="text" name="dec" class="form-control" id="input_dec" value="18">
-        </div>
+	<label class="col-lg-4 control-label" for="input_dec">DEC<p class="small">(deg || HH:MM:SS)</p></label>
+	<div class="col-lg-8">
+	  <input type="text" name="dec" class="form-control" id="input_dec" value="+41:14:09.7">
+	</div>
       </div>
       <div class="form-group">
-        <label class="col-sm-2 control-label" for="input_sr">SR</label>
-        <div class="col-xs-10">
-          <input type="text" name="sr" class="form-control" id="input_sr" value="2">
-        </div>
+	<label class="col-lg-4 control-label" for="input_sr">Search Radius<p class="small">(deg)</p></label>
+	<div class="col-lg-8">
+	  <input type="text" name="sr" class="form-control" id="input_sr" value="1">
+	</div>
       </div>
+    </div>
+    <div class="col-lg-4">
       <div class="form-group">
-        <label class="col-sm-2 control-label" for="input_lim">Lim</label>
-        <div class="col-xs-10">
-          <input type="text" name="lim" class="form-control" id="input_lim" value="10000">
-        </div>
-      </div>      
-
-      <div class="col-xs-12">&nbsp;</div>
-
-      <button type="submit" class="btn btn-default pull-left">Submit</button>
-    </form>
-    <div class="col-xs-12">&nbsp;</div>
-    <div class="col-xs-12">&nbsp;</div>
-  </div> 
-  <div class="row col-sm-5">
-    <div class="col-xs-5" id="container-plot-placeholder"></div> 
+	<label class="col-lg-4 control-label" for="input_lim">Max Objects</label>
+	<div class="col-lg-8">
+	  <input type="text" name="lim" class="form-control" id="input_lim" value="1000">
+	</div>
+      </div>   
+      <div class="form-group">
+	<label class="col-lg-4 control-label" for="input_min_nobs">Min nObs</label>
+	<div class="col-lg-8">
+	  <input type="text" name="min_nobs" class="form-control" id="input_min_nobs" value="15">
+	</div>
+      </div>   
+      <div class="form-group">
+	<label class="col-lg-4 control-label" for="input_max_nobs">Max nObs</label>
+	<div class="col-lg-8">
+	  <input type="text" name="max_nobs" class="form-control" id="input_max_nobs" value="1000">
+	</div>
+      </div> 
+      <div class="form-group">
+	<label class="col-lg-4 control-label" for="input_min_mag">Min Inst. Mag.</label>
+	<div class="col-lg-8">
+	  <input type="text" name="min_mag" class="form-control" id="input_max_mag" value="6">
+	</div>
+      </div>  
+    </div>
+    <div class="col-lg-4">    
+      <div class="form-group">
+	<label class="col-lg-4 control-label" for="input_max_mag">Max Inst. Mag.</label>
+	<div class="col-lg-8">
+	  <input type="text" name="max_mag" class="form-control" id="input_max_mag" value="19">
+	</div>
+      </div> 
+      <div class="form-group">
+	<label class="col-lg-4 control-label" for="input_filterby">Filter By</label>
+	<div class="col-lg-8">
+	  <select class="col-lg-6 form-control " id="input_filterby" name="filterby">
+	  </select>
+	</div>
+      </div>   
+      <div class="form-group">
+	<label class="col-lg-4 control-label" for="input_orderby">Order By</label>
+	<div class="col-lg-8">
+	  <select class="col-lg-6 form-control " id="input_orderby" name="orderby">
+	  </select>
+	</div>
+      </div>   
+    </div> 
   </div>
+  <div class="btn-toolbar">
+    <button type="submit" id="submit" class="btn btn-primary btn-sm pull-right">Submit</button>
+  </div>
+</form>
+<div class="col-lg-12">&nbsp;</div>
+<div class="col-lg-12">
+  <div class="col-lg-6" id="container-scs-plot-placeholder">&nbsp;</div>
+  <div class="col-lg-6" id="container-lc-plot-placeholder">&nbsp;</div>
 </div>
-
+<div class="col-lg-12">&nbsp;</div>
+<div class="btn-toolbar">
+  <button type="button" id="getlc" class="btn btn-primary btn-sm pull-right">Get LC for selected points</button>
+</div>
+<div class="col-lg-12">&nbsp;</div>
 

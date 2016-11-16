@@ -1,9 +1,0 @@
-{ 
-  "http_host" : "localhost",
-  "http_port" : "5002",
-  "ws_host":"localhost",
-  "ws_port":"3002"
-}
-
-
-

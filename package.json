@@ -23,6 +23,7 @@
   , "node-uuid" : "latest"
   , "rimraf" : "latest"
   , "pg" : "latest"
+  , "async" : "latest"
   }
 , "devDependencies": {
   }
