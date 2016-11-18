@@ -1,18 +1,1 @@
-{ 
-  "http_host":"localhost",
-  "http_port":"5001",
-  "ws_host":"localhost",
-  "ws_port":"3001",
-  "catalogues_host":"localhost",
-  "catalogues_port":"3001",
-  "base_dir":"/home/barnsley/Skycam/Skycam-UI/",
-  "bin_dir":"/home/barnsley/Skycam/Skycam-UI/bin",
-  "img_dir":"/home/barnsley/Skycam/Skycam-UI/img",
-  "jobs_dir":"/home/barnsley/Skycam/Skycam-UI/jobs",
-  "app_dir":"/home/barnsley/Skycam/Skycam-UI/app",
-  "db_dir":"/home/barnsley/Skycam/Skycam-UI/db",
-  "db_filename":"store.sqlite"
-}
-
-
-
+config.skycat.json

@@ -1,0 +1,16 @@
+{ 
+  "http_host":"150.204.240.115",
+  "http_port":"5000",
+  "ws_host":"",
+  "ws_port":"",
+  "catalogues_host":"150.204.240.115",
+  "catalogues_port":"3001",
+  "base_dir":"/home/eng/Skycam-UI/",
+  "bin_dir":"/home/eng/Skycam-UI/bin",
+  "img_dir":"/home/eng/Skycam-UI/img",
+  "jobs_dir":"/home/eng/Skycam-UI/jobs",
+  "app_dir":"/home/eng/Skycam-UI/app",
+  "db_dir":"/home/eng/Skycam-UI/db",
+  "db_filename":"store.sqlite"
+}
+
