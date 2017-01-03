@@ -5,12 +5,12 @@
   "ws_port":"",
   "catalogues_host":"150.204.240.115",
   "catalogues_port":"3001",
-  "base_dir":"/home/barnsley/Skycam/Skycam-UI/",
-  "bin_dir":"/home/barnsley/Skycam/Skycam-UI/bin",
-  "img_dir":"/home/barnsley/Skycam/Skycam-UI/img",
-  "jobs_dir":"/home/barnsley/Skycam/Skycam-UI/jobs",
-  "app_dir":"/home/barnsley/Skycam/Skycam-UI/app",
-  "db_dir":"/home/barnsley/Skycam/Skycam-UI/db",
+  "base_dir":"/home/barnsley/Skycam/catalogue-ui/",
+  "bin_dir":"/home/barnsley/Skycam/catalogue-ui/bin",
+  "img_dir":"/home/barnsley/Skycam/catalogue-ui/img",
+  "jobs_dir":"/home/barnsley/Skycam/catalogue-ui/jobs",
+  "app_dir":"/home/barnsley/Skycam/catalogue-ui/app",
+  "db_dir":"/home/barnsley/Skycam/catalogue-ui/db",
   "db_filename":"store.sqlite"
 }
 

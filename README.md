@@ -1,4 +1,4 @@
-Skycam-UI
+Catalogues-UI
 =============
 
 # Overview
@@ -19,7 +19,3 @@ served externally without a password
 4. Point browser to `localhost:[http_port]` where [**http\_port**] is the port specified in `config.json` 
 (default 5002)
 
-# Known Issues
-
-Currently the cone search is performed by connecting directly to the database. This should be superceded by
-a call to the catalogue-webservices SCS routine (i.e. within a model).
